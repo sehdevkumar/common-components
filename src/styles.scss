@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./assets/scss/common";
+body {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  margin: 0;
+  padding: 30px;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.confimation-overlay {
+  background-color: transparent !important;
+}
+.mat-dialog-container {
+  background-color: rgba(51, 48, 48, 0.692);
+  padding: 0px;
+
+  * {
+    color: #ffffff;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-weight: lighter;
+  }
+}

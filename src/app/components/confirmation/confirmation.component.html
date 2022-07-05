@@ -1,0 +1,36 @@
+<div>
+  <h1 mat-dialog-title>{{ data.title }}</h1>
+  <div
+    style="height: 1px; width: 100%; background: #ccffcc; margin-bottom: 5px"
+  ></div>
+  <div mat-dialog-content style="margin-top: 30px">
+    <p>{{ data.message }}</p>
+  </div>
+  <div
+    mat-dialog-actions
+    style="
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      margin-top: 30px;
+    "
+  >
+    <button
+      mat-button
+      [mat-dialog-close]="true"
+      class="primary"
+      [style.background]="data.cancelButtonColor"
+    >
+      {{ data.cancelButtonText }}
+    </button>
+    <button
+      mat-button
+      [mat-dialog-close]="true"
+      cdkFocusInitial
+      class="primary"
+      [style.background]="data.okButtonColor"
+    >
+      {{ data.okButtonText }}
+    </button>
+  </div>
+</div>
