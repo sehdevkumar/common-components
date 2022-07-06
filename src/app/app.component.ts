@@ -11,19 +11,16 @@ export class AppComponent {
 
   public askUserConfimation() {
     this.ss
-      .askConfirmationMessageDialogBox(
-        {
-          message: 'Do You Want to Delete Job?',
-          title: 'Confimation',
-          backgroundColor: '#262829',
-          okButtonColor: '#cf3636',
-          cancelButtonColor: '#a7b0b5',
-          okButtonText: 'Yes',
-          cancelButtonText: 'Cancel',
-          dismissAllowed: true,
-        },
-        false
-      )
+      .askConfirmationMessageDialogBox({
+        message: 'Do You Want to Delete Job?',
+        title: 'Confimation',
+        backgroundColor: '#262829',
+        okButtonColor: '#cf3636',
+        cancelButtonColor: '#a7b0b5',
+        okButtonText: 'Yes',
+        cancelButtonText: 'Cancel',
+        dismissAllowed: false,
+      })
       .subscribe((res) => {});
   }
 }

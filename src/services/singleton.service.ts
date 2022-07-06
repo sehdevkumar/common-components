@@ -11,14 +11,13 @@ export class SingletonService {
   constructor(private matDialog: MatDialog) {}
 
   public askConfirmationMessageDialogBox(
-    confimationMessage: ConfirmationMessageType,
-    dismisable = true
+    confimationMessage: ConfirmationMessageType
   ): Observable<any> {
     return this.matDialog
       .open(ConfirmationComponent, {
         panelClass: 'confimation-overlay',
         autoFocus: false,
-        disableClose: !dismisable,
+        disableClose: !confimationMessage?.dismissAllowed,
         data: confimationMessage,
         minWidth: '30%',
       })
