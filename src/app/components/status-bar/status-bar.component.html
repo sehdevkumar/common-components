@@ -1,1 +1,9 @@
-<p>status-bar works!</p>
+<div class="overlay_status" [@visibilityChanged]="status">
+  <ng-container *ngFor="let m of messageQueue">
+    <ng-container *ngIf="m?.show">
+      <div [@notificationAnimation] class="notification">
+        {{ m?.message }}
+      </div>
+    </ng-container>
+  </ng-container>
+</div>

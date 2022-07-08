@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { ConfirmationModule } from './components/confirmation/confirmation.module';
 import { MaterialModule } from './material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { StatusBarModule } from '@components/status-bar/status-bar.module';
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -16,6 +17,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserAnimationsModule,
     // Common Modules
     ConfirmationModule,
+    StatusBarModule,
   ],
   providers: [SingletonService],
   bootstrap: [AppComponent],

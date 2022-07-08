@@ -1,6 +1,7 @@
 import { Inject, Injectable } from '@angular/core';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { ConfirmationComponent } from '@components/confirmation/confirmation.component';
+import { StatusBarComponent } from '@components/status-bar/status-bar.component';
 import { MessageType, ConfirmationMessageType } from '@typings/common-typing';
 import { Observable } from 'rxjs';
 
@@ -8,6 +9,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class SingletonService {
+  statusBar!: StatusBarComponent;
+
   constructor(private matDialog: MatDialog) {}
 
   public askConfirmationMessageDialogBox(
